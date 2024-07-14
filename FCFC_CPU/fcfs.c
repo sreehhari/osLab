@@ -49,10 +49,10 @@ int main(){
     {
         if(currentTime<processes[i].arrival){
             currentTime=processes[i].arrival;
-        }
+        }//moves the current time to the arrival time of the first process
         //check if the process has arrived
-        int exec_time =processes[i].burst;
-        currentTime+=exec_time;
+        int exec_time =processes[i].burst;//adds the burst time of the current process to the execution time 
+        currentTime+=exec_time;//mpves the current time forward
 
         //print the execution
         printf("%-5d | P%d\n",currentTime,processes[i].name);
